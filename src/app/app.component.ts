@@ -1,13 +1,13 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { TaskPageComponent } from './presentation/task-page/task-page.component';
+
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule],
+  standalone: true, // Torna o componente standalone
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [TaskPageComponent], // Importa o componente standalone necessário
 })
-export class AppComponent {
-  title = 'task-manager';
-}
+export class AppComponent {}

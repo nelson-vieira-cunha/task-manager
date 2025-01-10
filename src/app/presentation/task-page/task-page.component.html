@@ -1,0 +1,13 @@
+<div>
+    <h1>Gerenciador de Tarefas</h1>
+    <form (ngSubmit)="addTask()">
+      <input type="text" [(ngModel)]="taskTitle" placeholder="Nova tarefa" name="taskTitle" />
+      <button type="submit">Adicionar</button>
+    </form>
+    <ul>
+      <li *ngFor="let task of tasks">
+        <span>{{ task.title }}</span>
+        <button (click)="removeTask(task.id)">Remover</button>
+      </li>
+    </ul>
+  </div>
